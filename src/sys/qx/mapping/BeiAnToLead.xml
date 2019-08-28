@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sys.qx.dao.BeiAnToLead">
+	<resultMap  id="beiAnEntering"  type="sys.qx.model.BeiAnEntering"> 
+			<id property="id" column="id"/>
+			<result column="tongyongmingcheng" property="tongyongmingcheng" jdbcType="VARCHAR" />
+			<result column="chanpinbianma" property="chanpinbianma" jdbcType="VARCHAR" />
+			<result column="shangpinming" property="shangpinming" jdbcType="VARCHAR" />
+			<result column="jixing" property="jixing" jdbcType="VARCHAR" />
+			<result column="guige" property="guige" jdbcType="VARCHAR" />
+			<result column="zhuanhuanbi" property="zhuanhuanbi" jdbcType="VARCHAR" />
+			<result column="danwei" property="danwei" jdbcType="VARCHAR" />
+			<result column="baocai" property="baocai" jdbcType="VARCHAR" />
+			<result column="shengchanchangjia" property="shengchanchangjia" jdbcType="VARCHAR" />
+			<result column="zhongbiaojia" property="zhongbiaojia" jdbcType="VARCHAR" />
+			<result column="shifoujiyao" property="shifoujiyao" jdbcType="VARCHAR" />
+			<result column="shifou47" property="shifou47" jdbcType="VARCHAR" />
+			<result column="yizhixing" property="yizhixing" jdbcType="VARCHAR" />
+			<result column="beianbianhao" property="beianbianhao" jdbcType="VARCHAR" />
+			<result column="shangpinbianhao" property="shangpinbianhao" jdbcType="VARCHAR" />
+			<result column="banbenhao" property="banbenhao" jdbcType="VARCHAR" />
+			<result column="lianxiren" property="lianxiren" jdbcType="VARCHAR" />
+			<result column="neiqin" property="neiqin" jdbcType="VARCHAR" />
+			<result column="gonghuodanjia" property="gonghuodanjia" jdbcType="VARCHAR" />
+			<result column="fukuanfangshi" property="fukuanfangshi" jdbcType="VARCHAR" />
+			<result column="buchazhouqi" property="buchazhouqi" jdbcType="VARCHAR" />
+			<result column="buchadanjia" property="buchadanjia" jdbcType="VARCHAR" />
+			<result column="baozhuangshuliang" property="baozhuangshuliang" jdbcType="VARCHAR" />
+			<result column="jinhuoqudao" property="jinhuoqudao" jdbcType="VARCHAR" />
+			<result column="yiyuan" property="yiyuan" jdbcType="VARCHAR" />
+			<result column="dnagqianzhuangtai" property="dnagqianzhuangtai" jdbcType="VARCHAR" />
+			<result column="pinzhongtanpanren" property="pinzhongtanpanren" jdbcType="VARCHAR" />
+			<result column="honghuiID" property="honghuiID" jdbcType="VARCHAR" />
+			<result column="xieyizhouqi" property="xieyizhouqi" jdbcType="VARCHAR" />
+			<result column="nianrenwuliang" property="nianrenwuliang" jdbcType="VARCHAR" />
+			<result column="fapiaozhonglei" property="fapiaozhonglei" jdbcType="VARCHAR" />
+			<result column="shifoubushuidian" property="shifoubushuidian" jdbcType="VARCHAR" />
+			<result column="beizhu" property="beizhu" jdbcType="VARCHAR" />
+			<result column="lianxidianhua" property="lianxidianhua" jdbcType="VARCHAR" />
+			<result column="neiqindianhua" property="neiqindianhua" jdbcType="VARCHAR" />
+			<result column="gonghuokoulv" property="gonghuokoulv" jdbcType="VARCHAR" />
+			<result column="buchakoulv" property="buchakoulv" jdbcType="VARCHAR" />
+			<result column="changjiashuxing" property="changjiashuxing" jdbcType="VARCHAR" />
+			<result column="fahuolianxiren" property="fahuolianxiren" jdbcType="VARCHAR" />
+			<result column="yiyuanID" property="yiyuanID" jdbcType="VARCHAR" />
+			<result column="linchuangweihu" property="linchuangweihu" jdbcType="VARCHAR" />
+			<result column="rukukuqu" property="rukukuqu" jdbcType="VARCHAR" />
+			<result column="shifoujinyuan" property="shifoujinyuan" jdbcType="VARCHAR" />
+			<result column="baozhengjin" property="baozhengjin" jdbcType="VARCHAR" />
+			<result column="fapiaodanwei" property="fapiaodanwei" jdbcType="VARCHAR" />
+			<result column="lirunshixianfangshi" property="lirunshixianfangshi" jdbcType="VARCHAR" />
+			<result column="caigoufuzeren" property="caigoufuzeren" jdbcType="VARCHAR" />
+			<result column="jiluruqi" property="jiluruqi" jdbcType="VARCHAR" />
+			<result column="xiugairiqi" property="xiugairiqi" jdbcType="VARCHAR" />
+			<result column="caigoujingli" property="caigoujingli" jdbcType="VARCHAR" />
+			<result column="zhuguanzongjingli" property="zhuguanzongjingli" jdbcType="VARCHAR" />
+			<result column="caigoufuhe" property="caigoufuhe" jdbcType="VARCHAR" />
+			<result column="code" property="code" jdbcType="VARCHAR" />
+			<result column="purchasingManagerCode" property="purchasingManagerCode" jdbcType="VARCHAR" />
+			<result column="operationManagerCode" property="operationManagerCode" jdbcType="VARCHAR" />
+			<result column="reexamineCode" property="reexamineCode" jdbcType="VARCHAR" />
+			<result column="purchasingManagerID" property="purchasingManagerID" jdbcType="VARCHAR" />
+			<result column="operationManagerID" property="operationManagerID" jdbcType="VARCHAR" />
+			<result column="reexamineID" property="reexamineID" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<!-- 备案录入 -->
+	<insert id="beiAnToLead" parameterType="sys.qx.model.BeiAnEntering">
+       insert into beian_entering(
+        tongyongmingcheng,
+		chanpinbianma,
+		shangpinming,
+		jixing,
+		guige,
+		zhuanhuanbi,
+		danwei,
+		baocai,
+		shengchanchangjia,
+		zhongbiaojia,
+		shifoujiyao,
+		shifou47,
+		yizhixing,
+		beianbianhao,
+		shangpinbianhao,
+		banbenhao,
+		lianxiren,
+		neiqin,
+		gonghuodanjia,
+		fukuanfangshi,
+		buchazhouqi,
+		buchadanjia,
+		baozhuangshuliang,
+		jinhuoqudao,
+		yiyuan,
+		dnagqianzhuangtai,
+		pinzhongtanpanren,
+		honghuiID,
+		xieyizhouqi,
+		nianrenwuliang,
+		fapiaozhonglei,
+		shifoubushuidian,
+		beizhu,
+		lianxidianhua,
+		neiqindianhua,
+		gonghuokoulv,
+		buchakoulv,
+		changjiashuxing,
+		fahuolianxiren,
+		yiyuanID,
+		linchuangweihu,
+		rukukuqu,
+		shifoujinyuan,
+		baozhengjin,
+		fapiaodanwei,
+		lirunshixianfangshi,
+		caigoufuzeren,
+		jiluruqi,
+		xiugairiqi,
+		caigoujingli,
+		zhuguanzongjingli,
+		caigoufuhe,
+		code 
+       ) 
+       values(
+        #{tongyongmingcheng},
+		#{chanpinbianma},
+		#{shangpinming},
+		#{jixing},
+		#{guige},
+		#{zhuanhuanbi},
+		#{danwei},
+		#{baocai},
+		#{shengchanchangjia},
+		#{zhongbiaojia},
+		#{shifoujiyao},
+		#{shifou47},
+		#{yizhixing},
+		#{beianbianhao},
+		#{shangpinbianhao},
+		#{banbenhao},
+		#{lianxiren},
+		#{neiqin},
+		#{gonghuodanjia},
+		#{fukuanfangshi},
+		#{buchazhouqi},
+		#{buchadanjia},
+		#{baozhuangshuliang},
+		#{jinhuoqudao},
+		#{yiyuan},
+		#{dnagqianzhuangtai},
+		#{pinzhongtanpanren},
+		#{honghuiID},
+		#{xieyizhouqi},
+		#{nianrenwuliang},
+		#{fapiaozhonglei},
+		#{shifoubushuidian},
+		#{beizhu},
+		#{lianxidianhua},
+		#{neiqindianhua},
+		#{gonghuokoulv},
+		#{buchakoulv},
+		#{changjiashuxing},
+		#{fahuolianxiren},
+		#{yiyuanID},
+		#{linchuangweihu},
+		#{rukukuqu},
+		#{shifoujinyuan},
+		#{baozhengjin},
+		#{fapiaodanwei},
+		#{lirunshixianfangshi},
+		#{caigoufuzeren},
+		#{jiluruqi},
+		#{xiugairiqi},
+		#{caigoujingli},
+		#{zhuguanzongjingli},
+		#{caigoufuhe},
+		#{code} 
+       );
+      </insert>  
+      
+      <!-- 采购经理审批 -->
+      <select id="purchasingManager" parameterType="sys.qx.model.BeiAnEntering" resultMap = "beiAnEntering">
+		select * from beian_entering where code=#{code};
+	</select>
+      
+      
+      
+ 
+      
+    <!-- 采购经理审批通过 -->
+ 	<update id="setForTheRecordStatus"  parameterType="sys.qx.model.BeiAnEntering" >  
+	     update  beian_entering set  code=#{code} , caigoujingli =#{caigoujingli}  where id = #{id}
+	</update> 
+	
+	
+	
+	
+	
+	 <!-- 修改领导审批状态 -->
+ 	<update id="setForBusinessStatus"  parameterType="sys.qx.model.BeiAnEntering" >  
+	     update  beian_entering set  code=#{code} , zhuguanzongjingli =#{zhuguanzongjingli}  where id = #{id}
+	</update> 
+      
+      
+      
+      
+ 
+	
+	
+	
+</mapper>
